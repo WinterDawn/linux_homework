@@ -4,7 +4,7 @@ echo "CPU Load Average: `uptime | awk '{print $8 $9 $10}'`   Free RAM:`free -m |
 
 echo 'NETWORK CONNECTIONS-------------------------'
 echo "lo Bytes Received: `awk '/lo:/{print $2}' /proc/net/dev`   Bytes Transmitted: `awk '/lo:/ {print $10}' /proc/net/dev`"
-echo "lo Bytes Received: `awk '/lo:/{print $2}' /proc/net/dev`   Bytes Transmitted: `awk '/lo:/ {print $10}' /proc/net/dev`"
+echo "enp0s3 Bytes Received: `awk '/enp0s3:/{print $2}' /proc/net/dev`   Bytes Transmitted: `awk '/enp0s3:/ {print $10}' /proc/net/dev`"
 CONN="No"
 ping -c 1 -w 5 -t 64 www.google.com > /dev/null
 if [ $? -eq 0 ]
